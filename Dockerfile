@@ -64,8 +64,10 @@ RUN cd neovim \
 # install poetry
 RUN curl -sSL https://install.python-poetry.org | python3 -
 
-# optional
+# misc
 # psycopg2 dependency
 RUN apt install -y libpq-dev
+RUN npm install -g tldr
+RUN apt install -y silversearcher-ag ripgrep fd-find
 
 ENTRYPOINT ["/bin/zsh"]
