@@ -16,7 +16,7 @@ Ubuntu based dockerlized develop environment for neovim user
   - zsh-autosuggestions
   - history-search-multi-word
 
-## Pre configured Runtimes
+## Pre configured runtimes
 - python: 3.10.13
 - node: 20.7.0
 - lua: 5.4.6
