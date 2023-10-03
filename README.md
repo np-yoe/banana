@@ -28,6 +28,7 @@ Ubuntu based dockerlized develop environment for neovim user
 - ag/ripgrep
 - fd
 - poetry(for python development)
+- thefuck
 
 ## Aliases
 - `v` for `nvim`

@@ -69,5 +69,6 @@ RUN curl -sSL https://install.python-poetry.org | python3 -
 RUN apt install -y libpq-dev
 RUN npm install -g tldr
 RUN apt install -y silversearcher-ag ripgrep fd-find
+RUN pip install thefuck
 
 ENTRYPOINT ["/bin/zsh"]
