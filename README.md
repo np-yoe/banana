@@ -1,5 +1,5 @@
 # Banana 🍌
-Ubuntu based dockerlized develop environment for neovim user
+Ubuntu based portable🍌 develop environment for neovim user
 
 ## Basic
 - base image
