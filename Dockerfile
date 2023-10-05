@@ -4,7 +4,7 @@ SHELL ["/bin/bash", "-c"]
 ENV TZ=Asia/Tokyo
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt update && apt upgrade
+RUN apt update -y && apt upgrade -y
 # install build toolchains
 RUN apt install -y build-essential libbz2-dev libdb-dev \
 	libreadline-dev libffi-dev libgdbm-dev liblzma-dev \
@@ -70,5 +70,7 @@ RUN apt install -y libpq-dev
 RUN npm install -g tldr
 RUN apt install -y silversearcher-ag ripgrep fd-find
 RUN pip install thefuck
+
+RUN sudo chsh -s /bin/zsh
 
 ENTRYPOINT ["/bin/zsh"]
