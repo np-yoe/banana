@@ -12,6 +12,7 @@ RUN apt install -y build-essential libbz2-dev libdb-dev \
 	zlib1g-dev uuid-dev tk-dev cmake ninja-build \
 	gettext libtool libtool-bin autoconf automake cmake g++ pkg-config \
 	zip unzip curl wget git sudo
+
 # install utilities
 RUN apt install -y zsh zoxide tmux
 
