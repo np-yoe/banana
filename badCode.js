@@ -23,7 +23,7 @@ function unusedFunction() {
     return "This function is never used"
 }
 
-eval("console.log('This is unsafe')")
+console.log('This is unsafe')
 
 const obj = {
   foo: "baz"
