@@ -26,6 +26,5 @@ function unusedFunction() {
 eval("console.log('This is unsafe')")
 
 const obj = {
-  foo: "bar",
-  foo: "baz"  // Duplicate key
+  foo: "baz"
 }
