@@ -1,0 +1,34 @@
+# This is a configuration file for pr-agent.
+# Qodo Merge: [Configuration file](https://qodo-merge-docs.qodo.ai/usage-guide/configuration_options/)
+# You can view all configuration options at the link below.
+# [pr-agent/pr_agent/settings](https://github.com/qodo-ai/pr-agent/blob/main/pr_agent/settings/configuration.toml)
+
+[config]
+model="o3-mini"
+use_wiki_settings_file=true
+response_language="ja-JP"
+ai_timeout=60 # 1min
+max_description_tokens=500
+max_commits_tokens=500
+max_model_tokens=32000 # Limits the maximum number of tokens that can be used by any model, regardless of the model's default capabilities.
+ignore_pr_title=["^Release", "^release", "^Develop to"]
+ignore_pr_target_branches=["master", "^release"]
+
+[github_app]
+pr_commands=["/review", "/improve"] # run /review and /improve command automatically on every PR
+
+[pr_reviewer]
+require_security_review=true
+extra_instructions="""\
+In the code feedback section, emphasize the following:
+- Please use Japanese for everything.
+- Does the code logic cover relevant edge cases?
+- Is the code logic clear and easy to understand?
+- Is the code logic efficient?
+"""
+
+[pr_code_suggestions]
+dual_publishing_score_threshold=7 # -1 to disable, [0-10] to set the threshold (>=) for publishing a code suggestion both in a table and as commitable
+
+[ignore]
+glob=["*.json", "*.yaml", "*.yml"]
